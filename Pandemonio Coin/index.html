@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Market Cap Trend</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #222;
+            font-family: sans-serif;
+            color: #fff;
+            flex-direction: column;
+        }
+        #coin-value {
+            text-align: center;
+            font-weight: 500;
+        }
+        #current-value {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        canvas {
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        span{
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="img/pdmlg.png" width="90px" />
+    </div>
+    <div id="coin-value">
+        <p>Pandemonio BTC</p>
+        <span id="current-value">Loading...</span>
+        <canvas id="coinChart"></canvas>
+        <button onclick="updateCoinValue()">Update Chart</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
